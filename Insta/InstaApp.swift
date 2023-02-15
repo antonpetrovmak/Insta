@@ -10,11 +10,18 @@ import SwiftUI
 @main
 struct InstaApp: App {
     let persistenceController = PersistenceController.shared
+    let networkManager = NetworkManager.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationView {
+                let userProvider = UserProvider(networkManager: networkManager)
+                let postProvider = PostProvider(networkManager: networkManager)
+                let dashboardUseCase = DashboardUseCase(userProvider: userProvider, postProvider: postProvider, persistence: persistenceController)
+                let dashboardViewModel = DashboardViewModel(dashboardUseCase: dashboardUseCase)
+                DashboardView(viewModel: dashboardViewModel)
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
         }
     }
 }

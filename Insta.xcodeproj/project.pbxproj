@@ -7,22 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B7E50F1299BC72000AAD24E /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E50F0299BC72000AAD24E /* DashboardViewModel.swift */; };
+		2B7E50F3299BC72B00AAD24E /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E50F2299BC72B00AAD24E /* StoryView.swift */; };
+		2B7E50F6299BC7C700AAD24E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E50F5299BC7C700AAD24E /* NetworkManager.swift */; };
+		2B7E50F8299BC87800AAD24E /* InstaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E50F7299BC87800AAD24E /* InstaError.swift */; };
+		2B7E50FB299BC98A00AAD24E /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E50FA299BC98A00AAD24E /* UserDTO.swift */; };
+		2B7E50FD299BD54600AAD24E /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E50FC299BD54600AAD24E /* PostView.swift */; };
+		2B7E50FF299BEA9500AAD24E /* DashboardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E50FE299BEA9500AAD24E /* DashboardUseCase.swift */; };
+		2B7E5101299BEAC300AAD24E /* PostProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E5100299BEAC300AAD24E /* PostProvider.swift */; };
+		2B7E5103299BEAD600AAD24E /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E5102299BEAD600AAD24E /* UserProvider.swift */; };
 		2BDB515B299BBBD80008083B /* InstaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB515A299BBBD80008083B /* InstaApp.swift */; };
-		2BDB515D299BBBD80008083B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB515C299BBBD80008083B /* ContentView.swift */; };
+		2BDB515D299BBBD80008083B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB515C299BBBD80008083B /* DashboardView.swift */; };
 		2BDB515F299BBBD90008083B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BDB515E299BBBD90008083B /* Assets.xcassets */; };
 		2BDB5162299BBBD90008083B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BDB5161299BBBD90008083B /* Preview Assets.xcassets */; };
 		2BDB5164299BBBD90008083B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB5163299BBBD90008083B /* Persistence.swift */; };
 		2BDB5167299BBBD90008083B /* Insta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB5165299BBBD90008083B /* Insta.xcdatamodeld */; };
+		2BDB5172299BBF1B0008083B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB516E299BBF1B0008083B /* User.swift */; };
+		2BDB5174299BBF1B0008083B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB5170299BBF1B0008083B /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B7E50F0299BC72000AAD24E /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		2B7E50F2299BC72B00AAD24E /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		2B7E50F5299BC7C700AAD24E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2B7E50F7299BC87800AAD24E /* InstaError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaError.swift; sourceTree = "<group>"; };
+		2B7E50FA299BC98A00AAD24E /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		2B7E50FC299BD54600AAD24E /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		2B7E50FE299BEA9500AAD24E /* DashboardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardUseCase.swift; sourceTree = "<group>"; };
+		2B7E5100299BEAC300AAD24E /* PostProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProvider.swift; sourceTree = "<group>"; };
+		2B7E5102299BEAD600AAD24E /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		2BDB5157299BBBD80008083B /* Insta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Insta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BDB515A299BBBD80008083B /* InstaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaApp.swift; sourceTree = "<group>"; };
-		2BDB515C299BBBD80008083B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2BDB515C299BBBD80008083B /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		2BDB515E299BBBD90008083B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BDB5161299BBBD90008083B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2BDB5163299BBBD90008083B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		2BDB5166299BBBD90008083B /* Insta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Insta.xcdatamodel; sourceTree = "<group>"; };
+		2BDB516E299BBF1B0008083B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2BDB5170299BBF1B0008083B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +58,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B7E50EE299BC68A00AAD24E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E50F2299BC72B00AAD24E /* StoryView.swift */,
+				2B7E50FC299BD54600AAD24E /* PostView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B7E50EF299BC71400AAD24E /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E50FE299BEA9500AAD24E /* DashboardUseCase.swift */,
+				2BDB515C299BBBD80008083B /* DashboardView.swift */,
+				2B7E50F0299BC72000AAD24E /* DashboardViewModel.swift */,
+				2B7E50EE299BC68A00AAD24E /* View */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		2B7E50F4299BC7BA00AAD24E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2BDB5163299BBBD90008083B /* Persistence.swift */,
+				2B7E50F5299BC7C700AAD24E /* NetworkManager.swift */,
+				2B7E50F7299BC87800AAD24E /* InstaError.swift */,
+				2B7E5100299BEAC300AAD24E /* PostProvider.swift */,
+				2B7E5102299BEAD600AAD24E /* UserProvider.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2B7E50F9299BC97300AAD24E /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E50FA299BC98A00AAD24E /* UserDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
 		2BDB514E299BBBD80008083B = {
 			isa = PBXGroup;
 			children = (
@@ -55,10 +117,12 @@
 		2BDB5159299BBBD80008083B /* Insta */ = {
 			isa = PBXGroup;
 			children = (
+				2B7E50F9299BC97300AAD24E /* DTOs */,
+				2B7E50F4299BC7BA00AAD24E /* Services */,
+				2B7E50EF299BC71400AAD24E /* Dashboard */,
+				2BDB516D299BBE190008083B /* Models */,
 				2BDB515A299BBBD80008083B /* InstaApp.swift */,
-				2BDB515C299BBBD80008083B /* ContentView.swift */,
 				2BDB515E299BBBD90008083B /* Assets.xcassets */,
-				2BDB5163299BBBD90008083B /* Persistence.swift */,
 				2BDB5165299BBBD90008083B /* Insta.xcdatamodeld */,
 				2BDB5160299BBBD90008083B /* Preview Content */,
 			);
@@ -71,6 +135,15 @@
 				2BDB5161299BBBD90008083B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2BDB516D299BBE190008083B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2BDB516E299BBF1B0008083B /* User.swift */,
+				2BDB5170299BBF1B0008083B /* Post.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +216,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B7E50FF299BEA9500AAD24E /* DashboardUseCase.swift in Sources */,
+				2B7E50F6299BC7C700AAD24E /* NetworkManager.swift in Sources */,
 				2BDB5164299BBBD90008083B /* Persistence.swift in Sources */,
+				2BDB5174299BBF1B0008083B /* Post.swift in Sources */,
+				2B7E5103299BEAD600AAD24E /* UserProvider.swift in Sources */,
+				2B7E50FB299BC98A00AAD24E /* UserDTO.swift in Sources */,
 				2BDB5167299BBBD90008083B /* Insta.xcdatamodeld in Sources */,
-				2BDB515D299BBBD80008083B /* ContentView.swift in Sources */,
+				2B7E50F8299BC87800AAD24E /* InstaError.swift in Sources */,
+				2BDB515D299BBBD80008083B /* DashboardView.swift in Sources */,
 				2BDB515B299BBBD80008083B /* InstaApp.swift in Sources */,
+				2BDB5172299BBF1B0008083B /* User.swift in Sources */,
+				2B7E5101299BEAC300AAD24E /* PostProvider.swift in Sources */,
+				2B7E50F3299BC72B00AAD24E /* StoryView.swift in Sources */,
+				2B7E50FD299BD54600AAD24E /* PostView.swift in Sources */,
+				2B7E50F1299BC72000AAD24E /* DashboardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
