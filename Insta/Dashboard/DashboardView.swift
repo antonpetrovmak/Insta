@@ -45,6 +45,14 @@ struct DashboardView<ViewModel: DashboardVMP>: View {
         }
         .navigationTitle("Insta")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                if viewModel.isLoading {
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                }
+            }
+        })
         .onAppear {
             viewModel.onAppear()
         }

@@ -24,32 +24,53 @@ final class DashboardViewModel: DashboardVMP {
     
     // MARK: - Public Methods of DashboardVMP
     func onAppear() {
-        loadUsers()
-        loadPosts()
+        Task {
+            await setLoading(true)
+            
+            await withTaskGroup(of: Void.self, body: { taskGroup in
+                taskGroup.addTask { try? await self.loadUsers() }
+                taskGroup.addTask { try? await self.loadPosts() }
+            })
+            
+            await setLoading(false)
+        }
     }
     
     func loadMorePosts() {
         guard currentPostPage < totalPostPages else { return }
         currentPostPage += 1
-        loadPosts()
+        Task {
+            await MainActor.run {
+                isLoading = true
+            }
+            try? await loadPosts()
+            await MainActor.run {
+                isLoading = false
+            }
+        }
     }
     
     func loadMoreStories() {
         guard currentUserPage < totalUsersPages else { return }
         currentUserPage += 1
-        loadUsers()
+        Task {
+            await setLoading(true)
+            try? await loadUsers()
+            await setLoading(false)
+        }
     }
     
     // MARK: - Private Methods
-    private func loadPosts() {
-        Task { [weak self] in
-            self?.totalPostPages = try await dashboardUseCase.loadPosts(page: currentPostPage)
-        }
+    @MainActor
+    private func setLoading(_ isOn: Bool) async {
+        isLoading = isOn
     }
     
-    private func loadUsers() {
-        Task { [weak self] in
-            self?.totalUsersPages = try await dashboardUseCase.loadStories(page: currentUserPage)
-        }
+    private func loadPosts() async throws {
+        totalPostPages = try await dashboardUseCase.loadPosts(page: currentPostPage)
+    }
+    
+    private func loadUsers() async throws {
+        totalUsersPages = try await dashboardUseCase.loadStories(page: currentUserPage)
     }
 }

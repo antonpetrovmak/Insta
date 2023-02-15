@@ -26,6 +26,11 @@ final class NetworkManager {
             throw InstaError.requestFailed
         }
         
+        // TODO: uncomment if you want to see loader
+//        let seconds = (2...10).randomElement()!
+//        print("Seconds: \(seconds)")
+//        try? await Task.sleep(for: .seconds(seconds))
+        
         do {
             return try decoder.decode(T.self, from: data)
         } catch {

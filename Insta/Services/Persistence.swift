@@ -30,6 +30,7 @@ struct PersistenceController {
     func importItems<DTO, Model: NSManagedObject>(_ items: [DTO], transform: @escaping (DTO, Model) -> Void) async throws {
         guard !items.isEmpty else { return }
         let privateContext = container.newBackgroundContext()
+        privateContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         
         privateContext.name = "Insert \(String(describing: Model.self))"
         privateContext.transactionAuthor = "Import \(String(describing: Model.self))"
